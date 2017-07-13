@@ -1,0 +1,11 @@
+CREATE DATABASE records;
+
+CREATE TABLE records.`admin` ( `adminId` int(11) NOT NULL AUTO_INCREMENT, `adminUsername` text NOT NULL, `adminPassword` text NOT NULL, PRIMARY KEY (`adminId`) );
+
+CREATE TABLE records.`items` ( `itemId` int(11) NOT NULL AUTO_INCREMENT, `monitorBN` text NOT NULL, `monitorSN` text NOT NULL, `systemBN` text NOT NULL, `systemSN` text NOT NULL, `UPSBN` text NOT NULL, `UPSSN` text NOT NULL, `location` text NOT NULL, `report` text NOT NULL, `dateAdded` date NOT NULL, PRIMARY KEY (`itemId`) );
+
+CREATE TABLE records.`search` ( `searchId` int(11) NOT NULL AUTO_INCREMENT, `searchTerm` text NOT NULL, PRIMARY KEY (`searchId`) );
+
+INSERT INTO records.admin(adminUsername,adminPassword) VALUES ("admin","password");
+
+INSERT INTO records.search VALUES(1,"");
